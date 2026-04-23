@@ -10,7 +10,7 @@ if (-not (Test-Path $BinDir)) {
     New-Item -ItemType Directory -Path $BinDir | Out-Null
 }
 
-function Build-Target {
+function Invoke-TargetBuild {
     param(
         [Parameter(Mandatory=$true)][string]$Target,
         [Parameter(Mandatory=$true)][string]$OutputName
@@ -33,10 +33,10 @@ function Build-Target {
     }
 }
 
-Build-Target -Target "x86_64-unknown-linux-gnu" -OutputName "anchor-core-linux-x64"
-Build-Target -Target "x86_64-apple-darwin" -OutputName "anchor-core-darwin-x64"
-Build-Target -Target "aarch64-apple-darwin" -OutputName "anchor-core-darwin-arm64"
-Build-Target -Target "x86_64-pc-windows-msvc" -OutputName "anchor-core-win32-x64.exe"
+Invoke-TargetBuild -Target "x86_64-unknown-linux-gnu" -OutputName "anchor-core-linux-x64"
+Invoke-TargetBuild -Target "x86_64-apple-darwin" -OutputName "anchor-core-darwin-x64"
+Invoke-TargetBuild -Target "aarch64-apple-darwin" -OutputName "anchor-core-darwin-arm64"
+Invoke-TargetBuild -Target "x86_64-pc-windows-msvc" -OutputName "anchor-core-win32-x64.exe"
 
 Push-Location $ExtDir
 npm install
