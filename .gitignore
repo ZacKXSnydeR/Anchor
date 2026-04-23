@@ -1,0 +1,27 @@
+# User-requested exclusions
+mainplan.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Rust
+anchor-core/target/
+
+# Node / npm
+**/node_modules/
+**/.npm-cache/
+**/npm-debug.log*
+**/yarn-error.log*
+
+# TypeScript build outputs
+anchor-extension/out/
+anchor-ui/dist/
+
+# Packaging artifacts
+**/*.vsix
+
+# Local env
+.env
+.env.*

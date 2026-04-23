@@ -1,0 +1,8 @@
+{
+  "name": "anchor-ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('dist',{recursive:true}); fs.writeFileSync('dist/index.html','<!doctype html><html><body><h1>Anchor UI build placeholder</h1></body></html>'); console.log('anchor-ui build complete');\""
+  }
+}

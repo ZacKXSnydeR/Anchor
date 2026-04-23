@@ -1,0 +1,15 @@
+src/**
+tsconfig.json
+node_modules/**
+.npm-cache/**
+.vscode/**
+tests/**
+jest.config.cjs
+tsconfig.test.json
+**/*.map
+
+bin/**
+!bin/anchor-core-linux-x64
+!bin/anchor-core-darwin-x64
+!bin/anchor-core-darwin-arm64
+!bin/anchor-core-win32-x64.exe

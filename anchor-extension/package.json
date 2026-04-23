@@ -1,0 +1,72 @@
+{
+  "name": "anchor",
+  "displayName": "Anchor - Crash-proof context for Antigravity",
+  "description": "WAL-protected conversation and code state guardian",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZacKXSnydeR/Anchor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZacKXSnydeR/Anchor/issues"
+  },
+  "homepage": "https://github.com/ZacKXSnydeR/Anchor#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "anchor.recover",
+        "title": "Anchor: Recover Lost Conversations"
+      },
+      {
+        "command": "anchor.showHistory",
+        "title": "Anchor: Show Conversation History"
+      },
+      {
+        "command": "anchor.exportConversation",
+        "title": "Anchor: Export Current Conversation"
+      },
+      {
+        "command": "anchor.verifyMcp",
+        "title": "Anchor: Verify MCP Tools"
+      },
+      {
+        "command": "anchor.unregisterMcp",
+        "title": "Anchor: Unregister MCP Tools"
+      },
+      {
+        "command": "anchor.runStateRepair",
+        "title": "Anchor: Repair Sidebar Index"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "build": "npm run compile",
+    "test": "jest --runInBand",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "simple-git": "^3.29.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^25.6.0",
+    "@types/vscode": "^1.85.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.9",
+    "typescript": "^6.0.3",
+    "@vscode/vsce": "^3.9.1"
+  }
+}
